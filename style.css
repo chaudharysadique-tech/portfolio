@@ -59,6 +59,16 @@ strong { color: var(--t1); font-weight: 600; }
 ::-webkit-scrollbar-thumb:hover  { background: var(--accent); }
 
 /* ── Custom Cursor ────────────────────── */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  background: var(--accent);
+  width: 0%;
+  z-index: 9999;
+  transition: width 0.1s;
+}
+
 .cursor {
   position: fixed;
   width: 36px; height: 36px;
@@ -563,7 +573,13 @@ section { padding: 7rem 0; }
 }
 .mini-stat:hover { border-color: rgba(220,165,76,0.2); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
 .mini-num {
-  display: block;
+  display: inline-block;
+  font-family: var(--f1);
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--accent);
+}
+.mini-num-plus {
   font-family: var(--f1);
   font-size: 2.5rem;
   font-weight: 500;

@@ -58,13 +58,20 @@ function type() {
 }
 type();
 
-/* ── 3. Navbar ────────────────────── */
+/* ── 3. Navbar & Scroll Progress ────── */
 const nav    = document.getElementById('nav');
 const burger = document.getElementById('burger');
 const drawer = document.getElementById('navDrawer');
+const scrollProgress = document.getElementById('scrollProgress');
 
 window.addEventListener('scroll', () => {
   nav.classList.toggle('stuck', window.scrollY > 50);
+
+  // Scroll Progress Bar
+  const scrollPx = document.documentElement.scrollTop;
+  const winHeightPx = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = `${(scrollPx / winHeightPx) * 100}%`;
+  if (scrollProgress) scrollProgress.style.width = scrolled;
 
   // Active nav item
   const sections = document.querySelectorAll('section[id]');
@@ -98,7 +105,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-/* ── 5. Scroll Reveal ─────────────── */
+/* ── 5. Scroll Reveal & Counters ──── */
 const revealObserver = new IntersectionObserver((entries, obs) => {
   entries.forEach(en => {
     if (en.isIntersecting) {
@@ -109,6 +116,30 @@ const revealObserver = new IntersectionObserver((entries, obs) => {
 }, { threshold: 0.1 });
 
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// Animated Number Counters
+const counters = document.querySelectorAll('.mini-num');
+const counterObserver = new IntersectionObserver((entries, obs) => {
+  entries.forEach(en => {
+    if (en.isIntersecting) {
+      const target = +en.target.getAttribute('data-target');
+      let count = 0;
+      const inc = target / 60; // animation speed
+      const updateCount = () => {
+        count += inc;
+        if (count < target) {
+          en.target.innerText = Math.ceil(count);
+          requestAnimationFrame(updateCount);
+        } else {
+          en.target.innerText = target;
+        }
+      };
+      updateCount();
+      obs.unobserve(en.target);
+    }
+  });
+}, { threshold: 0.5 });
+counters.forEach(c => counterObserver.observe(c));
 
 /* ── 6. Neural Canvas ─────────────── */
 const canvas = document.getElementById('canvas');
@@ -190,7 +221,23 @@ function frame() {
 }
 frame();
 
-/* ── 7. Photo Card parallax tilt ──── */
+/* ── 7. Magnetic Buttons & 3D Tilt ── */
+document.querySelectorAll('.magnetic').forEach(btn => {
+  btn.addEventListener('mousemove', e => {
+    const rect = btn.getBoundingClientRect();
+    const h = rect.width / 2;
+    const v = rect.height / 2;
+    const x = e.clientX - rect.left - h;
+    const y = e.clientY - rect.top - v;
+    btn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+  });
+  btn.addEventListener('mouseleave', () => {
+    btn.style.transform = `translate(0px, 0px)`;
+    btn.style.transition = 'transform 0.5s ease';
+    setTimeout(() => { btn.style.transition = ''; }, 500);
+  });
+});
+
 const photoCard = document.querySelector('.photo-card');
 const photoFrame = document.querySelector('.photo-frame');
 if (photoFrame) {
