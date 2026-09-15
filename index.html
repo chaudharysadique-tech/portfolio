@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chaudhary Mohammad Sadique — AIML Engineer</title>
+  <meta name="description" content="Portfolio of Chaudhary Mohammad Sadique — AIML Engineer, B.Tech student, Machine Learning developer." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── CURSOR ── -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- ── NAV ── -->
+  <nav id="nav">
+    <a href="#hero" class="nav-brand">CMS<span class="brand-dot">.</span></a>
+    <div class="nav-center">
+      <a href="#about"    class="nav-item">About</a>
+      <a href="#skills"   class="nav-item">Skills</a>
+      <a href="#projects" class="nav-item">Projects</a>
+      <a href="#contact"  class="nav-item">Contact</a>
+    </div>
+    <div class="nav-right">
+      <a href="mailto:sadiquechdhr@gmail.com" class="nav-hire">Hire Me ↗</a>
+    </div>
+    <button class="burger" id="burger">
+      <div class="burger-bar"></div>
+      <div class="burger-bar"></div>
+    </button>
+    <div class="nav-drawer" id="navDrawer">
+      <a href="#about"    class="drawer-link">About</a>
+      <a href="#skills"   class="drawer-link">Skills</a>
+      <a href="#projects" class="drawer-link">Projects</a>
+      <a href="#contact"  class="drawer-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════
+       HERO — split layout, full-screen
+  ════════════════════════════════════ -->
+  <section id="hero">
+    <canvas id="canvas"></canvas>
+
+    <!-- Left side — text -->
+    <div class="hero-left">
+      <div class="hero-eyebrow">
+        <span class="dot-live"></span>
+        <span>Available for work</span>
+      </div>
+
+      <h1 class="hero-h1">
+        <span class="line" data-text="Chaudhary">Chaudhary</span>
+        <span class="line accent-line" data-text="Mohammad">Mohammad</span>
+        <span class="line" data-text="Sadique">Sadique</span>
+      </h1>
+
+      <div class="hero-role-row">
+        <div class="role-pill">
+          <span class="role-typed" id="typedEl"></span><span class="caret">_</span>
+        </div>
+      </div>
+
+      <p class="hero-desc">
+        B.Tech AIML student building intelligent systems — from regression models to real-world applications.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="cta-primary">See Projects</a>
+        <a href="#contact"  class="cta-text">Get in touch →</a>
+      </div>
+
+      <div class="hero-scroll-hint">
+        <div class="scroll-track"><div class="scroll-thumb"></div></div>
+        <span>scroll</span>
+      </div>
+    </div>
+
+    <!-- Right side — photo -->
+    <div class="hero-right">
+      <div class="photo-frame">
+        <!-- Staggered backdrop for professional editorial look -->
+        <div class="photo-backdrop"></div>
+        
+        <!-- Foreground photo card — clean, elegant -->
+        <div class="photo-card">
+          <img src="profile.jpg" alt="Chaudhary Mohammad Sadique" class="photo-img" />
+        </div>
+
+        <!-- Info badge -->
+        <div class="photo-badge">
+          <span class="badge-icon">💼</span>
+          <div>
+            <strong>AIML Engineer</strong>
+            <span>B.Tech Student</span>
+          </div>
+        </div>
+
+        <!-- Experience tag -->
+        <div class="photo-tag">
+          <span>4+ Projects</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       ABOUT (Matching Image Layout)
+  ════════════════════════════════════ -->
+  <section id="about">
+    <div class="wrap">
+      
+      <!-- Stats Row -->
+      <div class="about-mini-stats reveal">
+        <div class="mini-stat">
+          <span class="mini-num">120+</span>
+          <span class="mini-lbl">Day Learning Streak</span>
+        </div>
+        <div class="mini-stat">
+          <span class="mini-num">17</span>
+          <span class="mini-lbl">Public Repositories</span>
+        </div>
+        <div class="mini-stat">
+          <span class="mini-num">185</span>
+          <span class="mini-lbl">GitHub Contributions</span>
+        </div>
+      </div>
+
+      <div class="section-head reveal delay-1">
+        <h2>About Me</h2>
+      </div>
+
+      <div class="about-body reveal delay-2">
+        <p class="about-intro">
+          I'm a first-year B.Tech CSE-AIML student at Mumbai, driven by an insatiable curiosity about Artificial Intelligence and Machine Learning. What started as an interest has evolved into a 120+ day learning streak, where I dedicate myself daily to understanding the fundamentals and building practical projects.
+        </p>
+        
+        <div class="quote-block">
+          <p>"I believe in learning through Discipline, Consistency, Hands-on projects, and Fundamentals"</p>
+        </div>
+        
+        <p class="about-intro">
+          Unlike many who jump straight into frameworks, I've invested significant time mastering the core concepts.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       SKILLS
+  ════════════════════════════════════ -->
+  <section id="skills" class="alt-bg">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="label">02 — Skills</span>
+        <h2>Tech I Use</h2>
+      </div>
+
+      <div class="skill-blocks">
+
+        <div class="skill-block reveal">
+          <h3 class="sb-title">Languages</h3>
+          <div class="skill-list">
+            <div class="skill-chip">☕ Java</div>
+            <div class="skill-chip">🐍 Python</div>
+            <div class="skill-chip">🌐 HTML</div>
+            <div class="skill-chip">🎨 CSS</div>
+            <div class="skill-chip">⚡ JavaScript</div>
+            <div class="skill-chip">🗄️ SQL</div>
+          </div>
+        </div>
+
+        <div class="skill-block reveal delay-1">
+          <h3 class="sb-title">AI / ML</h3>
+          <div class="skill-list">
+            <div class="skill-chip">🧠 Machine Learning</div>
+            <div class="skill-chip">📐 Maths for ML</div>
+          </div>
+        </div>
+
+        <div class="skill-block reveal delay-2">
+          <h3 class="sb-title">Data Science</h3>
+          <div class="skill-list">
+            <div class="skill-chip">🔢 NumPy</div>
+            <div class="skill-chip">🐼 Pandas</div>
+            <div class="skill-chip">📊 Seaborn</div>
+            <div class="skill-chip">📈 Matplotlib</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Tag cloud -->
+      <div class="tag-cloud reveal delay-3">
+        <span>scikit-learn</span><span>Jupyter</span><span>Git</span>
+        <span>VS Code</span><span>EDA</span><span>Regression</span>
+        <span>Classification</span><span>OOP</span><span>Linux</span>
+        <span>Data Analysis</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       PROJECTS
+  ════════════════════════════════════ -->
+  <section id="projects">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="label">03 — Projects</span>
+        <h2>What I've Built</h2>
+      </div>
+
+      <div class="project-grid">
+
+        <article class="pcard reveal" data-num="01">
+          <div class="pcard-top">
+            <div class="pcard-icon">🎓</div>
+            <div class="pcard-tags">
+              <span>Java</span><span>OOP</span><span>SQL</span>
+            </div>
+          </div>
+          <h3>Student Management System</h3>
+          <p>Comprehensive desktop application for managing student records, attendance, grades and enrollments — built on clean OOP principles with a SQL backend.</p>
+          <ul class="pcard-feats">
+            <li>Full CRUD operations</li>
+            <li>Grade analytics dashboard</li>
+            <li>Role-based access control</li>
+          </ul>
+          <a href="https://github.com/chaudharysadique-tech" target="_blank" rel="noopener" class="pcard-link">
+            View on GitHub
+            <svg viewBox="0 0 16 16" fill="currentColor" width="14" height="14"><path d="M8.22 2.97a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06l2.97-2.97H3.75a.75.75 0 0 1 0-1.5h7.44L8.22 4.03a.75.75 0 0 1 0-1.06Z"/></svg>
+          </a>
+        </article>
+
+        <article class="pcard reveal delay-1" data-num="02">
+          <div class="pcard-top">
+            <div class="pcard-icon">📧</div>
+            <div class="pcard-tags">
+              <span>ML</span><span>Python</span><span>NLP</span>
+            </div>
+          </div>
+          <h3>Spam Email Classifier</h3>
+          <p>NLP-powered classifier distinguishing spam from legitimate emails using TF-IDF vectorization and Naive Bayes — trained on the SMS Spam Collection dataset.</p>
+          <ul class="pcard-feats">
+            <li>TF-IDF + Naive Bayes</li>
+            <li>High precision &amp; recall</li>
+            <li>End-to-end pipeline</li>
+          </ul>
+          <a href="https://github.com/chaudharysadique-tech" target="_blank" rel="noopener" class="pcard-link">
+            View on GitHub
+            <svg viewBox="0 0 16 16" fill="currentColor" width="14" height="14"><path d="M8.22 2.97a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06l2.97-2.97H3.75a.75.75 0 0 1 0-1.5h7.44L8.22 4.03a.75.75 0 0 1 0-1.06Z"/></svg>
+          </a>
+        </article>
+
+        <article class="pcard reveal delay-2" data-num="03">
+          <div class="pcard-top">
+            <div class="pcard-icon">🏠</div>
+            <div class="pcard-tags">
+              <span>ML</span><span>Python</span><span>Pandas</span>
+            </div>
+          </div>
+          <h3>House Price Prediction</h3>
+          <p>Regression model predicting residential property prices from location, area and market data — includes deep EDA and feature engineering pipelines.</p>
+          <ul class="pcard-feats">
+            <li>Linear &amp; polynomial regression</li>
+            <li>Feature engineering</li>
+            <li>Interactive EDA visuals</li>
+          </ul>
+          <a href="https://github.com/chaudharysadique-tech" target="_blank" rel="noopener" class="pcard-link">
+            View on GitHub
+            <svg viewBox="0 0 16 16" fill="currentColor" width="14" height="14"><path d="M8.22 2.97a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06l2.97-2.97H3.75a.75.75 0 0 1 0-1.5h7.44L8.22 4.03a.75.75 0 0 1 0-1.06Z"/></svg>
+          </a>
+        </article>
+
+        <article class="pcard reveal delay-3" data-num="04">
+          <div class="pcard-top">
+            <div class="pcard-icon">🌦️</div>
+            <div class="pcard-tags">
+              <span>ML</span><span>Python</span><span>Seaborn</span>
+            </div>
+          </div>
+          <h3>Weather Prediction</h3>
+          <p>Time-series forecasting model predicting weather patterns from historical climate data — compares multiple ML algorithms with rich Seaborn visualizations.</p>
+          <ul class="pcard-feats">
+            <li>Time-series analysis</li>
+            <li>Multi-model benchmarking</li>
+            <li>Climate data visualisation</li>
+          </ul>
+          <a href="https://github.com/chaudharysadique-tech" target="_blank" rel="noopener" class="pcard-link">
+            View on GitHub
+            <svg viewBox="0 0 16 16" fill="currentColor" width="14" height="14"><path d="M8.22 2.97a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06l2.97-2.97H3.75a.75.75 0 0 1 0-1.5h7.44L8.22 4.03a.75.75 0 0 1 0-1.06Z"/></svg>
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════
+       CONTACT
+  ════════════════════════════════════ -->
+  <section id="contact" class="alt-bg">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="label">04 — Contact</span>
+        <h2>Let's Talk</h2>
+      </div>
+
+      <div class="contact-body">
+        <div class="contact-left reveal">
+          <p class="contact-big">Have a project in mind or want to collaborate? Drop me a message — I reply fast.</p>
+          <a href="mailto:sadiquechdhr@gmail.com" class="email-cta">
+            sadiquechdhr@gmail.com
+            <span>↗</span>
+          </a>
+          <div class="avail-badge">
+            <span class="avail-pulse"></span>
+            Open to internships &amp; collaborations
+          </div>
+        </div>
+
+        <div class="contact-links reveal delay-1">
+          <a href="https://github.com/chaudharysadique-tech" target="_blank" rel="noopener" class="clink">
+            <div class="clink-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+            </div>
+            <div class="clink-info">
+              <span class="clink-lbl">GitHub</span>
+              <span class="clink-val">@chaudharysadique-tech</span>
+            </div>
+            <span class="clink-arr">↗</span>
+          </a>
+
+          <a href="https://linkedin.com/in/sadique-chaudhary-306b29375" target="_blank" rel="noopener" class="clink">
+            <div class="clink-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </div>
+            <div class="clink-info">
+              <span class="clink-lbl">LinkedIn</span>
+              <span class="clink-val">sadique-chaudhary-306b29375</span>
+            </div>
+            <span class="clink-arr">↗</span>
+          </a>
+
+          <a href="mailto:sadiquechdhr@gmail.com" class="clink">
+            <div class="clink-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </div>
+            <div class="clink-info">
+              <span class="clink-lbl">Email</span>
+              <span class="clink-val">sadiquechdhr@gmail.com</span>
+            </div>
+            <span class="clink-arr">↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer id="footer">
+    <div class="wrap footer-inner">
+      <span class="footer-brand">CMS<span class="brand-dot">.</span></span>
+      <span class="footer-note">© 2025 Chaudhary Mohammad Sadique</span>
+      <a href="#hero" class="footer-top" aria-label="Back to top">↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
